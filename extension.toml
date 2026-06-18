@@ -3,9 +3,7 @@ name = "Core Language"
 version = "0.1.0"
 schema_version = 1
 authors = ["DslsDZC"]
-description = "Core programming language support — syntax highlighting and LSP integration"
+description = "Core programming language support — syntax highlighting"
 repository = "https://github.com/dslsdzc/core"
 
 [grammars.core]
-repository = "https://github.com/dslsdzc/core-plugin-zed"
-commit = "HEAD"
