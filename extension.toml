@@ -8,4 +8,4 @@ repository = "https://github.com/dslsdzc/core"
 
 [grammars.core]
 repository = "https://github.com/dslsdzc/core-plugin-zed"
-rev = "1c5af39d370dd442864261e809fd0d6baf05aef8"
+rev = "6132caaef4659968db4b5168f4f2f51713a9862c"
