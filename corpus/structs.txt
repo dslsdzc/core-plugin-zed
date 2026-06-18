@@ -1,0 +1,32 @@
+====================================
+Struct definition
+====================================
+
+struct Point {
+    x: float,
+    y: float,
+}
+
+---
+
+( source_file
+  ( struct_definition
+    ( identifier )
+    ( field_declaration ( identifier ) ( type ) )
+    ( field_declaration ( identifier ) ( type ) ) ) )
+
+====================================
+Generic struct
+====================================
+
+struct Box[T] {
+    value: T,
+}
+
+---
+
+( source_file
+  ( struct_definition
+    ( identifier )
+    ( type_parameter_list ( identifier ) )
+    ( field_declaration ( identifier ) ( type ) ) ) )

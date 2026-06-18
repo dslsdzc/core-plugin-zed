@@ -1,0 +1,55 @@
+====================================
+Function definitions
+====================================
+
+fn add(a: int, b: int) -> int {
+    return a + b;
+}
+
+---
+
+( source_file
+  ( function_definition
+    ( identifier )
+    ( parameter_list
+      ( parameter ( identifier ) ( type ) )
+      ( parameter ( identifier ) ( type ) ) )
+    ( type )
+    ( block
+      ( return_statement
+        ( binary_expression ( identifier ) ( identifier ) ) ) ) ) )
+
+====================================
+Function with no params, no return
+====================================
+
+fn greet() {
+    print("hello");
+}
+
+---
+
+( source_file
+  ( function_definition
+    ( identifier )
+    ( parameter_list )
+    ( block
+      ( expression_statement
+        ( call_expression ( identifier ) ( ( string ) ) ) ) ) ) )
+
+====================================
+Single-line function
+====================================
+
+fn add(a: int, b: int) -> int = a + b;
+
+---
+
+( source_file
+  ( function_definition
+    ( identifier )
+    ( parameter_list
+      ( parameter ( identifier ) ( type ) )
+      ( parameter ( identifier ) ( type ) ) )
+    ( type )
+    ( binary_expression ( identifier ) ( identifier ) ) ) )
