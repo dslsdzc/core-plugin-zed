@@ -24,6 +24,7 @@
 (method_signature
   "fn" (identifier) @method)
 (call_expression . (identifier) @function)
+(call_expression . (field_expression "." (identifier) @method))
 
 ; ── Parameters ──
 (parameter . (identifier) @parameter)
