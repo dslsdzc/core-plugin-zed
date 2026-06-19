@@ -9,4 +9,4 @@ languages = ["languages/core"]
 
 [grammars.core]
 repository = "https://github.com/dslsdzc/core-plugin-zed"
-rev = "b342f6f"
+rev = "main"
