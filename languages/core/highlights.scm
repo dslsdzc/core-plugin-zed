@@ -17,13 +17,13 @@
 ] @type.builtin
 
 ; ── Functions ──
-(function_definition name: (identifier) @function)
-(flow_definition name: (identifier) @function)
-(method_signature name: (identifier) @method)
-(call_expression function: (identifier) @function)
+(function_definition (identifier) @function)
+(flow_definition (identifier) @function)
+(method_signature (identifier) @method)
+(call_expression . (identifier) @function)
 
 ; ── Parameters ──
-(parameter name: (identifier) @parameter)
+(parameter (identifier) @parameter)
 
 ; ── Identifiers ──
 (identifier) @variable
