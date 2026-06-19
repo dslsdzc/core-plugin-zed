@@ -3,41 +3,29 @@
 
 ; ── Keywords ──
 [
-  "fn" "flow" "return" "yield"
-  "if" "else" "match" "for" "loop" "while" "break" "continue"
+  "fn" "flow" "return" "if" "else" "match" "for" "loop"
   "struct" "enum" "interface" "impl" "type" "fileid"
-  "import" "as" "pub" "mod"
-  "mut" "move" "ref"
-  "go" "await" "recv"
-  "unsafe"
-  "requires" "ensures" "old"
-  "true" "false"
-  "None" "Some" "Ok" "Err"
-  "unit"
+  "import" "mut" "in"
+  "go" "await"
+  "true" "false" "unit"
+  "auto"
 ] @keyword
-
-"in" @keyword
 
 ; ── Types ──
 [
-  "int" "float" "bool" "string" "char" "never" "auto"
+  "int" "float" "bool" "string" "char" "never"
 ] @type.builtin
-
-(self) @variable.builtin
-(Self) @type
 
 ; ── Functions ──
 (function_definition name: (identifier) @function)
 (flow_definition name: (identifier) @function)
 (method_signature name: (identifier) @method)
-
 (call_expression function: (identifier) @function)
-(call_expression function: (field_expression field: (identifier) @method))
 
 ; ── Parameters ──
 (parameter name: (identifier) @parameter)
 
-; ── Identifiers (fallback) ──
+; ── Identifiers ──
 (identifier) @variable
 
 ; ── Literals ──
@@ -50,11 +38,9 @@
 [
   "+" "-" "*" "/" "%"
   "==" "!=" "<" ">" "<=" ">="
-  "&&" "||" "!"
+  "&&" "||"
   "=" ":="
-  ".."
-  "->"
-  "as"
+  "->" "=>" ".."
 ] @operator
 
 ; ── Punctuation ──
@@ -62,9 +48,7 @@
   ";" "," "."
   "{" "}" "(" ")" "[" "]"
   ":" "::"
-  "=>"
-  "?" "&" "|"
 ] @punctuation
 
-; ── Attributes / doc comments ──
-; (attribute) @attribute
+; ── Recv (special syntax) ──
+(recv_expression) @function.builtin
