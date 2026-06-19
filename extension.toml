@@ -5,7 +5,8 @@ schema_version = 1
 authors = ["DslsDZC"]
 description = "Core programming language support — syntax highlighting"
 repository = "https://github.com/dslsdzc/core"
+languages = ["languages/core"]
 
 [grammars.core]
 repository = "https://github.com/dslsdzc/core-plugin-zed"
-rev = "main"
+rev = "b342f6f"
